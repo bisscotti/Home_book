@@ -1,0 +1,423 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*------------------------ nav bar ---------------------------------*/
+nav {
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    width: 33%;
+}
+nav .logoimg {
+    width: 5%;
+    background-color: white;
+    margin: 0 0.5rem;
+}
+nav .logoimg img{
+    background-size: cover;
+    margin: auto;
+}
+
+nav .logo h1 {
+    font-size: 1rem;
+    font-family: 'Geist Mono', serif;
+    margin: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    padding: 0 1rem;
+    margin: 0.5rem;
+    width: 33%;
+}
+nav ul li {
+    list-style-type: none;
+    margin: 0.5rem;
+}
+nav li a {
+    color: white;
+    text-decoration: underline;
+}
+nav li a:hover {
+    color: red;
+    text-decoration: none;
+}
+nav li a:active {
+    color: blue;
+}
+nav .search {
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+nav input[type="text"] {
+    border-radius: 5px;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+nav .search button {
+    color:black;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+nav .search button:hover{
+    color: salmon;
+    background-color: cornflowerblue;
+}
+nav .search button:active{
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+    box-shadow: -1px 64px 54px -23px rgba(0,0,0,1);
+}
+@media only screen and (max-width: 1024px) {
+    nav {
+        height: 8%;
+        width: 100%;
+    }
+    li a {
+        font-size: 0.8rem;
+    }
+    nav ul {
+        padding-right: 2.5rem;
+    }
+    nav .logoimg{
+        width: 20%;
+    }
+}
+@media only screen and (max-width: 426px) {
+    nav {
+        flex-direction: column;
+        height: 13%;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+    }
+    nav ul {
+        width: 50%;
+        justify-content: center;
+        margin: 0;
+    }
+    li a {
+        font-size: 0.8rem;
+    }
+    nav .logoimg{
+        width: 20%;
+    }
+}
+
+/* ---------------------------------- Banner ------------------------------------------ */
+.welcome {
+    overflow: hidden;
+    height: 35%;
+    width: 100%;
+    box-sizing: border-box;
+    top: 3rem;
+}
+.welcome .banner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: url("../images/background-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    margin: 0rem auto;
+}
+.container {
+    overflow: hidden;
+    font-family: 'Geist Mono', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-block;
+    background-color: rgb(153, 124, 45);
+    opacity: 0.9;
+    border-radius: 2.8rem;
+    width: 35%;
+    height: 50%;
+    margin: 15rem 0 5rem 5rem;
+    color: rgb(117, 209, 105);
+}
+.container h2, .container p, .container .avatar {
+    margin: 1rem;
+}
+.container .avatar {
+    max-width: 15%;
+    height: 15%;
+}
+@media only screen and (max-width: 1024px) {
+    .container {
+        height: 35%;
+        width: 45%;
+        font-size: 0.8rem;
+        margin: 25rem 0 5rem 3rem;
+    }
+    .container .avatar {
+        max-width: 25%;
+        height: 25%;
+    }
+    .container h2, .container p, .container .avatar {
+        margin: 0.2rem 0 0.4rem 1rem;
+    }
+}
+@media only screen and (max-width: 426px){
+    .container {
+        height: 35%;
+        width: 55%;
+        font-size: 0.7rem;
+        margin: 15rem 0 5rem 3rem;
+    }
+    .container .avatar {
+        max-width: 20%;
+        height: 20%;
+    }
+    .welcome .banner{
+        width: 100%;
+    }
+}
+
+/* ---------------------------------- Values -------------------------------------- */
+.about{
+    display: block;
+    width: 100%;
+    height: 35rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.about .imgcontainer {
+    width: 60%;
+    height: 40%;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+.values img {
+    height: 100%;
+    width: 100%;
+}
+.values {
+    display: flex;
+    height: 70%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+.firstvalue,
+.secondvalue,
+.thirdvalue,
+.fourthvalue {
+    display: flex;
+    align-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+}
+.about h2, .about p {
+    display: block;
+    height: 10%;
+    width: 100%;
+}
+.about h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.values h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.about p, .values p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.values p, .values h3{
+    height: 15%;
+    margin: 0.5rem auto
+}
+#ourvalues {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .about {
+        height: 18rem;
+    }
+    .values p{
+        font-size: 0.8rem;
+    }
+    .values h3{
+        font-size: 1.1rem;
+    }
+    .about h2{
+        font-size: 1.5rem;
+    }
+    .about .imgcontainer{
+        width: 60%;
+        height: 30%;
+    }
+    .about h2, .about p {
+        display: block;
+        height: 6%;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 426px){
+    .values {
+        flex-direction: column;
+        width: 50%;
+        height: 80%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .firstvalue,
+    .secondvalue,
+    .thirdvalue,
+    .fourthvalue {
+        width: 70%;
+        height: 33%;
+    }
+    .values .imgcontainer,
+    .values p,
+    .values h3 {
+        padding: 0 auto;
+    }
+    .about {
+        height: 40%;
+    }
+    .about h2 {
+        font-size: 1.2rem;
+    }
+    .about p {
+        font-size: 0.8rem;
+    }
+    
+}
+
+/* ------------------------------------- Staff -------------------------------- */
+
+.staff {
+    width: 100%;
+    height: 20rem;
+    margin: 0 1rem;
+}
+.librarians {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template: 3rem 1fr / repeat(3, 1fr);
+    text-align: center;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.ourstaff {
+    grid-column: 1 / span 3;
+}
+.lbfirst,
+.lbsecond,
+.lbthird {
+    width: 90%;
+    height: 100%;
+    padding: 0 3rem;
+}
+.librarians .lbimage {
+    width: 50%;
+    height: 40%;
+    overflow: hidden;
+    float: left;
+
+}
+.librarians img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+@media only screen and (max-width: 1024px) {
+    .librarians h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .librarians h3{
+        font-size: 1.1rem;
+        font-weight: 450;
+    }
+    .librarians p{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .librarians .lbimage {
+        height: 30%;
+    }
+    .staff {
+        margin: 0 2rem 0 0.3rem;
+    }
+}
+@media only screen and (max-width: 426px) {
+    .librarians {
+        display: grid;
+        grid-template-rows: 3rem repeat(3, 1fr);
+    }
+    .ourstaff {
+        grid-column: 1/2;
+        grid-row: 1 / 2;
+    }
+    .lbfirst {
+        grid-row: 2 / 3;
+    }
+    .lbsecond {
+        grid-row: 3 / 4;
+    }
+    .lbthird {
+        grid-row: 4 / 5;
+    }
+    .staff {
+        height: 35%;
+    }
+}
+/* ------------------------- Footer ---------------------- */
+footer {
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+}
+.copy {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+.copy p{
+    margin: 1rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+}
